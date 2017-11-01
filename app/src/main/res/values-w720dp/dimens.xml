@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="setting_card_text_size">17sp</dimen>
+    <dimen name="setting_card_text_size_desc">14sp</dimen>
+    <dimen name="select_card_text_size">25sp</dimen>
+    <dimen name="select_spinner_text_size">32sp</dimen>
+
+</resources>

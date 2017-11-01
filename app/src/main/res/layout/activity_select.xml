@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            tools:context=".activities.ActivitySelect">
+
+            <!-- Search + lang card view -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/select_search_card"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_margin="@dimen/card_margin">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="1"
+                    android:padding="10dp"
+                    android:rowCount="3">
+
+                    <!-- Prevent default focus -->
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="0px"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+
+                    <EditText
+                        android:id="@+id/select_search_category"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="fill_horizontal"
+                        android:hint="@string/select_search"
+                        android:nextFocusLeft="@id/select_search_category"
+                        android:nextFocusUp="@id/select_search_category"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/select_search_language_1"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="fill_horizontal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/select_spinner_text_size" />
+
+                    <Spinner
+                        android:id="@+id/select_search_language_2"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="fill_horizontal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/select_spinner_text_size" />
+                </GridLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/select_no_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_categories"
+                android:textAlignment="center"
+                android:textColor="@color/colorDesc"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/select_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:indeterminate="true" />
+
+            <TableLayout
+                android:id="@+id/select_category_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></TableLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

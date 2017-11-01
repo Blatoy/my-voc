@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:compat="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_refresh_result"
+        android:icon="@drawable/ic_refresh_white_24dp"
+        android:title="@string/action_title_refresh"
+        android:visible="false"
+        compat:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_bar_button_restart_list"
+        android:icon="@drawable/ic_cancel_white_24dp"
+        android:title="@string/action_title_restart"
+        android:visible="false"
+        compat:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_open_settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="@string/action_title_settings"
+        compat:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/settings_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/card_margin"
+
+        tools:context="cifom_et.myvoc.activities.ActivitySettings">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:padding="10dp"
+                android:text="@string/setting_quiz"
+                android:textColor="@color/colorDesc"
+                android:textSize="15sp" />
+
+            <!-- Open editor -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="openEditor">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_open_list_editor"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:text="@string/setting_will_open_browser"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Quiz order -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="updateQuizOrder">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_default_order"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/setting_value_quiz_order"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Language 1 -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="setLanguage1">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_default_search_language_base"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/setting_value_language1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Language 2 -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="setLanguage2">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_default_search_language_target"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/setting_value_language2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:padding="10dp"
+                android:text="@string/setting_misc"
+                android:textColor="@color/colorDesc"
+                android:textSize="15sp" />
+
+            <!-- Sync only on wifi -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="setWifiSync">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_wifi_only"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+
+                    <Switch
+                        android:id="@+id/setting_value_wifi_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:onClick="setWifiSync" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Reset tutorial -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="resetTutorial">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_reset_tutorial"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:text="@string/setting_reset_tutorial_desc"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:padding="10dp"
+                android:text="@string/setting_advanced"
+                android:textColor="@color/colorDesc"
+                android:textSize="15sp" />
+
+
+            <!-- API Server -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="changeApiServer">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_api_url"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/setting_value_api_server"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Clear cache -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="clearCache">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_clear_cache"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:text="@string/setting_progress_loss"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!-- Reset everything -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin"
+                android:onClick="resetAllSettings">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/setting_reset"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/setting_card_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:text="@string/setting_progress_loss"
+                        android:textColor="@color/colorDesc"
+                        android:textSize="@dimen/setting_card_text_size_desc" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
